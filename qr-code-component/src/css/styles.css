@@ -1,0 +1,60 @@
+:root {
+  /* colors */
+
+  --clr-slate-900: #1f314f;
+  --clr-slate-500: #68778d;
+  --clr-slate-300: #d5e1ef;
+  --clr-white: #fff;
+
+  /* typography */
+
+  --fs-15: 0.9375rem; /* 15px */
+  --fs-22: 1.375rem; /* 22px */
+
+  --fw-400: 400; /* normal */
+  --fw-700: 700; /* bold */
+
+  /* spacing */
+
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-40: 40px;
+}
+
+body {
+  background-color: var(--clr-slate-300);
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.card {
+  background-color: var(--clr-white);
+  border-radius: 20px;
+  padding: var(--space-16) var(--space-16) var(--space-40) var(--space-16);
+  width: min(320px, 90vw);
+}
+
+.card__image {
+  border-radius: 10px;
+  margin-bottom: var(--space-24);
+}
+
+.card__heading {
+  color: var(--clr-slate-900);
+  font-size: var(--fs-22);
+  font-weight: var(--fw-700);
+  line-height: 120%;
+  margin-bottom: var(--space-16);
+  padding-inline: var(--space-16);
+}
+
+.card__description {
+  color: var(--clr-slate-500);
+  font-size: var(--fs-15);
+  font-weight: var(--fw-400);
+  letter-spacing: 0.2px;
+  line-height: 140%;
+  padding-inline: var(--space-16);
+  text-align: center;
+}

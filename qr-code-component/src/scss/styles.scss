@@ -1,0 +1,72 @@
+@use "sass:map";
+
+// colors
+
+$clr: (
+  clr-slate-900: #1f314f,
+  clr-slate-500: #68778d,
+  clr-slate-300: #d5e1ef,
+  clr-white: #fff,
+);
+
+// typograhy
+
+$fs: (
+  // 15px
+  fs-15: 0.9375rem,
+
+  // 22px
+  fs-22: 1.375rem
+);
+
+$fw: (
+  // normal
+  fw-400: 400,
+
+  // bold
+  fw-700: 700
+);
+
+// spacing
+
+$space-16: 16px;
+$space-24: 24px;
+$space-40: 40px;
+
+body {
+  background-color: map.get($clr, clr-slate-300);
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.card {
+  background-color: map.get($clr, clr-white);
+  border-radius: 20px;
+  box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.0477);
+  padding: $space-16 $space-16 $space-40 $space-16;
+  width: min(320px, 90vw);
+
+  &__image {
+    border-radius: 10px;
+    margin-bottom: $space-24;
+  }
+
+  &__heading {
+    color: map.get($clr, clr-slate-900);
+    font-size: map.get($fs, fs-22);
+    font-weight: map.get($fw, fw-700);
+    line-height: 120%;
+    margin-bottom: $space-16;
+    padding-inline: $space-16;
+  }
+
+  &__description {
+    color: map.get($clr, clr-slate-500);
+    font-size: map.get($fs, fs-15);
+    font-weight: map.get($fw, fw-400);
+    letter-spacing: 0.2px;
+    line-height: 140%;
+    padding-inline: $space-16;
+  }
+}
