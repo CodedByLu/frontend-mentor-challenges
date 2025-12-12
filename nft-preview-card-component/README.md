@@ -36,9 +36,9 @@ In 2022, a German court ruled that embedding Google Fonts via external requests 
 
 - Frontend Mentor Challenge - [NFT preview component challenge](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U)
 
-- GitHub Repo - [NFT preview card component github repo]()
+- GitHub Repo - [NFT preview card component github repo](https://github.com/CodedByLu/frontend-mentor-challenges/tree/main/nft-preview-card-component)
 
-- Live Site - [NFT preview card component live site]()
+- Live Site - [NFT preview card component live site](https://codedbylu.github.io/frontend-mentor-challenges/nft-preview-card-component/)
 
 ---
 
