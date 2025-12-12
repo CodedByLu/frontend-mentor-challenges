@@ -1,0 +1,31 @@
+@font-face {
+  font-display: swap;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 300;
+  src: url(../../assets/fonts/Outfit-Light.woff2) format("woff2"),
+    url(../../assets/fonts/Outfit-Light.woff) format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../../assets/fonts/Outfit-Regular.woff2) format("woff2"),
+    url(../../assets/fonts/Outfit-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  src: url(../../assets/fonts/Outfit-SemiBold.woff2) format("woff2"),
+    url(../../assets/fonts/Outfit-SemiBold.woff) format("woff");
+}
+
+body {
+  font-family: "Outfit", "Segoe UI", Roboto, Helvetica, Arial, system-ui,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
