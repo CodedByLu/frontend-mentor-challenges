@@ -1,6 +1,6 @@
 # 🌐 QR Code Component
 
-This is my take on the Frontend Mentor – QR Code Component challenge!
+This is my take on the Frontend Mentor – [QR Code Component challenge!](https://www.youtube.com/watch?v=xNww4fiWXRs)
 
 ## ✨ Preview
 
