@@ -39,6 +39,7 @@
 
 a {
   color: var(--clr-white);
+  text-decoration: none;
   transition: color var(--transition);
 }
 
@@ -70,10 +71,6 @@ body {
   font-size: var(--fs-22);
   font-weight: var(--fw-600);
   margin-bottom: var(--space-16);
-}
-
-.card__title a {
-  text-decoration: none;
 }
 
 .card__description {
@@ -144,10 +141,6 @@ body {
   font-weight: var(--fw-400);
 }
 
-.card__creator-name a {
-  text-decoration: none;
-}
-
 /* active states */
 
 .card__image::before,
@@ -184,8 +177,6 @@ body {
   opacity: 1;
 }
 
-a:hover,
-a:focus,
-a:active {
+a:is(:hover, :focus, :active) {
   color: var(--clr-cyan-400);
 }
