@@ -1,6 +1,6 @@
 # 🌐 NFT preview card component
 
-This is my take on the Frontend Mentor – NFT Preview Card Component challenge!
+This is my take on the Frontend Mentor – [NFT Preview Card Component challenge!](https://www.youtube.com/watch?v=qBQYYWItZCQ&t=508s)
 
 ## ✨ Preview
 
