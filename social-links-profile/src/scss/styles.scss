@@ -1,0 +1,101 @@
+// colors
+
+$clr-white: #fff;
+$clr-black: #000;
+$clr-grey-700: #333;
+$clr-grey-800: #1f1f1f;
+$clr-grey-900: #141414;
+$clr-green: #c5f82a;
+
+// typography
+
+$fs-14: 0.875rem; // 14px
+$fs-24: 1.5rem; // 24px
+
+$fw-400: 400; // regular
+$fw-600: 600; // semibold
+$fw-700: 700; // bold
+
+// spacing
+
+$space-4: 4px;
+$space-8: 8px;
+$space-12: 12px;
+$space-16: 16px;
+$space-24: 24px;
+$space-40: 40px;
+
+// border radius
+
+$radius-8: 8px;
+$radius-12: 12px;
+$radius-circle: 50%;
+
+// transition
+
+$transtition: 0.5s ease-in-out;
+
+body {
+  background-color: $clr-grey-900;
+  display: grid;
+  font-size: $fs-14;
+  place-items: center;
+  text-align: center;
+}
+
+.profile {
+  background-color: $clr-grey-800;
+  border-radius: $radius-12;
+  display: grid;
+  gap: $space-24;
+  padding: clamp($space-24, 6vw, $space-40);
+  width: min(384px, 90vw);
+
+  &-image {
+    aspect-ratio: 1;
+    border-radius: $radius-circle;
+    justify-self: center;
+    width: 88px;
+  }
+
+  &-name {
+    font-size: $fs-24;
+    font-weight: $fw-600;
+    margin-bottom: $space-4;
+  }
+
+  &-location {
+    color: $clr-green;
+    font-size: $fs-14;
+    font-weight: $fw-700;
+  }
+
+  &-occupation {
+    font-weight: $fw-400;
+  }
+
+  &-socials {
+    display: grid;
+    gap: $space-16;
+  }
+
+  &-social-item {
+    a {
+      background-color: $clr-grey-700;
+      border-radius: $radius-8;
+      color: $clr-white;
+      display: block;
+      font-weight: $fw-700;
+      padding-block: $space-16;
+      text-decoration: none;
+      transition: background-color $transtition;
+
+      // hover and focus states
+      &:hover,
+      &:focus {
+        background-color: $clr-green;
+        color: $clr-black;
+      }
+    }
+  }
+}
