@@ -34,11 +34,11 @@ In 2022, a German court ruled that embedding Google Fonts via external requests 
 
 ## 🔗 Links
 
-- Frontend Mentor Challenge - [Social links profile challenge]()
+- Frontend Mentor Challenge - [Social links profile challenge](https://www.frontendmentor.io/challenges/social-links-profile-UG32l9m6dQ)
 
-- GitHub Repo - [Social links profile github repo]()
+- GitHub Repo - [Social links profile github repo](https://github.com/CodedByLu/frontend-mentor-challenges/tree/main/social-links-profile)
 
-- Live Site - [Social links profile live site]()
+- Live Site - [Social links profile live site](https://codedbylu.github.io/frontend-mentor-challenges/social-links-profile/)
 
 ---
 
