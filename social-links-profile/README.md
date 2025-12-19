@@ -1,6 +1,6 @@
 # 🌐 Social links profile
 
-This is my take on the Frontend Mentor – Social links profile challenge!
+This is my take on the Frontend Mentor – [Social links profile challenge!](https://www.youtube.com/watch?v=dq0xZl66FTM)
 
 ## ✨ Preview
 
