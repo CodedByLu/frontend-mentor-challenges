@@ -1,0 +1,22 @@
+@font-face {
+  font-display: swap;
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../../assets/fonts/Figtree-ExtraBold.woff2") format("woff2"),
+    url("../../assets/fonts/Figtree-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../assets/fonts/Figtree-Medium.woff2") format("woff2"),
+    url("../../assets/fonts/Figtree-Medium.woff") format("woff");
+}
+
+body {
+  font-family: "Figtree", "Segoe UI", Roboto, Helvetica, Arial, system-ui,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}

@@ -1,0 +1,120 @@
+:root {
+  /* colors */
+  --clr-yellow: #f4d04e;
+  --clr-gray-950: #111111;
+  --clr-gray-500: #6b6b6b;
+  --clr-white: #fff;
+
+  /* typography */
+  --fs-14: 0.875rem; /* 14px */
+  --fs-16: 1rem; /* 16px */
+  --fs-24: 1.5rem; /* 24px */
+
+  --fw-500: 500; /* meduim */
+  --fw-800: 800; /* extra bold */
+
+  /* spacing */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-24: 24px;
+
+  /* border radius */
+  --radius-4: 4px;
+  --radius-10: 10px;
+  --radius-20: 20px;
+
+  /* border */
+  --border: 1px solid var(--clr-gray-950);
+
+  /* transition */
+  --transition: 0.5s ease-in-out;
+}
+
+body {
+  background-color: var(--clr-yellow);
+  color: var(--clr-gray-950);
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background-color: var(--clr-white);
+  border: var(--border);
+  border-radius: var(--radius-20);
+  box-shadow: 8px 8px 0 0 var(--clr-gray-950);
+  display: grid;
+  gap: var(--space-24);
+  padding: var(--space-24);
+  transition: box-shadow var(--transition);
+  width: min(90vw, 384px);
+}
+
+.card-image {
+  border-radius: var(--radius-10);
+}
+
+.card-content {
+  display: grid;
+  gap: var(--space-12);
+}
+
+.card-category {
+  background-color: var(--clr-yellow);
+  border-radius: var(--radius-4);
+  font-size: var(--fs-14);
+  font-weight: var(--fw-800);
+  justify-self: start;
+  padding: var(--space-8) var(--space-12);
+}
+
+.card-publish-date {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-500);
+}
+
+.card-title {
+  font-size: var(--fs-24);
+  font-weight: var(--fw-800);
+}
+
+.card-title-link {
+  color: inherit;
+  text-decoration: none;
+  transition:
+    color var(--transition),
+    outline-color var(--transition);
+}
+
+.card-description {
+  color: var(--clr-gray-500);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-500);
+  text-wrap: wrap;
+}
+
+.card-author {
+  align-items: center;
+  display: flex;
+  gap: var(--space-24);
+}
+
+.card-author-picture {
+  height: 32px;
+  width: 32px;
+}
+
+.card-author-name {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-800);
+}
+
+/* hover state */
+.card-title-link:hover,
+.card-title-link:focus {
+  color: var(--clr-yellow);
+}
+
+.card:has(.card-title-link:hover, .card-title-link:focus) {
+  box-shadow: 16px 16px 0 0 var(--clr-gray-950);
+}
