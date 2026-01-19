@@ -35,9 +35,9 @@ In 2022, a German court ruled that embedding Google Fonts via external requests 
 
 - Frontend Mentor Challenge - [Blog preview card challenge](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS)
 
-- GitHub Repo - [/_ copy the h1 name here _/ github repo]()
+- GitHub Repo - [Blog preview card github repo]()
 
-- Live Site - [/_ copy the h1 name here _/ live site]()
+- Live Site - [Blog preview card live site]()
 
 ---
 
