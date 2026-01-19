@@ -4,7 +4,7 @@ This is my take on the Frontend Mentor – Blog preview card challenge!
 
 ## ✨ Preview
 
-![screenshot of my solution](./assets/images/design/preview.jpg)
+![screenshot of my solution](./assets/design/preview.jpg)
 
 ## 🛠️ Built With
 
