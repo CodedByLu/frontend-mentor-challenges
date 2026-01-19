@@ -4,7 +4,7 @@ This is my take on the Frontend Mentor – [QR Code Component challenge!](https:
 
 ## ✨ Preview
 
-![screenshot of my solution](./assets/design/preview.jpg)
+![screenshot of my solution](./assets/designs/preview.jpg)
 
 ## 🛠️ Built With
 
