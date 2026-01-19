@@ -4,8 +4,8 @@ This is my take on the Frontend Mentor – [NFT Preview Card Component challenge
 
 ## ✨ Preview
 
-![screenshot of my solution](./assets/images/screenshot.png)
-![screenshot of my solution with active states](./assets/images/screenshot-active.png)
+![solution](./assets/design/preview.jpg)
+![solution with active states](./assets/design/active-states,jpg)
 
 ## 🛠️ Built With
 
