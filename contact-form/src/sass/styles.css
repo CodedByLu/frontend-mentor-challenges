@@ -3,8 +3,6 @@ body {
   color: #2a4144;
   display: grid;
   font-size: 1rem;
-  gap: 32px;
-  grid-template-rows: 1fr auto;
   padding-block: clamp(32px, 8vw, 128px);
   place-items: center;
 }
@@ -213,25 +211,6 @@ body {
   color: #0c7d69;
   content: "*";
   margin-left: 8px;
-}
-
-.footer {
-  text-align: center;
-}
-.footer__link::after {
-  content: "";
-  aspect-ratio: 1;
-  width: 12px;
-  display: inline-grid;
-  margin-left: 8px;
-  background: url("../../assets/images/expand-arrows.png") no-repeat center/contain;
-  transition: transform 0.5s ease-in-out;
-}
-.footer__link:hover, .footer__link:focus {
-  text-decoration: none;
-}
-.footer__link:hover::after, .footer__link:focus::after {
-  transform: translateY(-5px);
 }
 
 .invalidInput {
