@@ -1,0 +1,119 @@
+:root {
+  /* color */
+  --clr-white: #fff;
+  --clr-yellow: #f4d04e;
+  --clr-grey-950: #111;
+  --clr-grey-500: #6b6b6b;
+
+  /* typography */
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-24: 1.5rem;
+
+  --fw-500: 500;
+  --fw-800: 800;
+
+  /* spacing */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-24: 24px;
+
+  /* border radius */
+  --radius-4: 4px;
+  --radius-10: 10px;
+  --radius-20: 20px;
+
+  /* border */
+  --border: 1px solid var(--clr-grey-950);
+
+  /* transition */
+  --transition: 0.5s ease-in-out;
+}
+
+body {
+  background-color: var(--clr-yellow);
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background-color: var(--clr-white);
+  color: var(--clr-grey-950);
+  display: grid;
+  gap: var(--space-24);
+  padding: var(--space-24);
+  border: var(--border);
+  border-radius: var(--radius-20);
+  width: min(90vw, 384px);
+  box-shadow: 8px 8px 0 0 var(--clr-grey-950);
+  transition: box-shadow var(--transition);
+}
+
+.card-image {
+  border-radius: var(--radius-10);
+}
+
+.card-content {
+  display: grid;
+  gap: var(--space-12);
+}
+
+.card-category {
+  background-color: var(--clr-yellow);
+  border-radius: var(--radius-4);
+  padding: var(--space-8) var(--space-12);
+  font-size: var(--fs-14);
+  font-weight: var(--fw-800);
+  justify-self: start;
+}
+
+.card-publish-date {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-500);
+}
+
+.card-title {
+  font-size: var(--fs-24);
+  font-weight: var(--fw-800);
+}
+
+.card-title-link {
+  text-decoration: none;
+  color: inherit;
+  transition:
+    color var(--transition),
+    outline-color var(--transition);
+}
+
+.card-description {
+  color: var(--clr-grey-500);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-500);
+  text-wrap: wrap;
+}
+
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.card-author-image {
+  aspect-ratio: 1;
+  width: 32px;
+}
+
+.card-author-name {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-800);
+}
+
+/* hover and focus states */
+.card-title-link:is(:hover, :focus) {
+  color: var(--clr-yellow);
+}
+
+.card:has(.card-title-link:is(:hover, :focus)) {
+  box-shadow: 16px 16px 0 0 var(--clr-grey-950);
+}
