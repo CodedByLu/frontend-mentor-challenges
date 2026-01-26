@@ -38,7 +38,7 @@ In 2022, a German court ruled that embedding Google Fonts via external requests 
 
 - GitHub Repo - [Blog preview card github repo](https://github.com/CodedByLu/frontend-mentor-challenges/tree/main/blog-preview-card)
 
-- Live Site - [Blog preview card github live site](https://codedbylu.github.io/frontend-mentor-challenges/blog-previwe-card/)
+- Live Site - [Blog preview card github live site](https://codedbylu.github.io/frontend-mentor-challenges/blog-preview-card/)
 
 ---
 
