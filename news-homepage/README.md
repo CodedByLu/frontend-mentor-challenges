@@ -3,8 +3,7 @@
 This is my take on the Frontend Mentor – [News homepage challenge!](https://www.youtube.com/watch?v=qALOZpHawq0)
 
 ![preview desktop](./assets/design/desktop-design.jpg)
-![preview mobile](./assets/design/mobile-design.jpg)
-![preview mobile menu](./assets/design/mobile-menu.jpg)
+![preview mobile](./assets/design/mobile-design.jpg)![preview mobile menu](./assets/design/mobile-menu.jpg)
 
 ## 🛠️ Built With
 
