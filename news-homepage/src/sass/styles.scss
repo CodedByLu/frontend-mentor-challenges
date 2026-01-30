@@ -1,0 +1,348 @@
+// ---------- color ----------
+$clr-white: #fff;
+$clr-black: #000;
+$clr-grey-200: #d8d8d8;
+$clr-grey-300: #c5c6ce;
+$clr-navy-600: #5e607a;
+$clr-navy-950: #00001a;
+$clr-gold-400: #e9aa52;
+$clr-red-500: #f15d51;
+
+// ---------- typography ----------
+$fs-14: 0.875rem; // 14px
+$fs-15: 0.938rem; // 15px
+$fs-18: 1.125rem; // 18px
+$fs-20: 1.25rem; // 20px
+$fs-32: 2rem; // 32px
+$fs-40: 2.5rem; // 40px
+$fs-56: 3.5rem; // 56px
+
+$fw-400: 400; // regular
+$fw-700: 700; // bold
+$fw-900: 900; // extra bold
+
+$ls-4: 4.38px;
+
+// ---------- spacing ----------
+$space-8: 8px;
+$space-12: 12px;
+$space-16: 16px;
+$space-24: 24px;
+$space-28: 28px;
+$space-32: 32px;
+$space-40: 40px;
+$space-64: 64px;
+$space-80: 80px;
+$space-88: 88px;
+$space-145: 145px;
+
+// ---------- transition ----------
+$transition: 0.5s ease-in-out;
+
+// ---------- global ----------
+body {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  gap: $space-64;
+  padding: $space-24 clamp($space-16, 5vw, $space-64);
+}
+
+.body--locked {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// ---------- header ----------
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__toggle {
+    z-index: 999;
+    border: none;
+    background-color: transparent;
+  }
+
+  &__nav {
+    z-index: 100;
+    padding-inline: $space-24;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: $clr-white;
+    height: 100vh;
+    width: 65%;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      transform $transition,
+      opacity 0.3s ease;
+
+    &--open {
+      transform: translateX(0%);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: $space-24;
+      margin-top: $space-145;
+    }
+
+    &-item-link {
+      color: $clr-navy-950;
+      transition: color $transition;
+
+      &:is(:hover, :focus, :active) {
+        color: $clr-red-500;
+      }
+    }
+  }
+}
+
+// ---------- backdrop ----------
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: $clr-navy-950;
+  opacity: 0;
+  z-index: 50;
+  pointer-events: none;
+
+  &--visible {
+    opacity: 0.5;
+    pointer-events: auto;
+  }
+}
+
+// ---------- main ----------
+.main {
+  display: grid;
+  gap: $space-64;
+
+  &__media {
+    margin-bottom: $space-24;
+  }
+
+  &__text {
+    display: grid;
+    gap: $space-24;
+  }
+
+  &__title {
+    font-size: clamp($fs-40, 5vw, $fs-56);
+    font-weight: $fw-900;
+    color: $clr-navy-950;
+  }
+
+  &__description {
+    display: grid;
+    gap: $space-24;
+  }
+
+  &__paragraph {
+    color: $clr-navy-600;
+    font-size: $fs-15;
+    line-height: 1.73;
+  }
+
+  &__link {
+    background-color: $clr-red-500;
+    padding: $space-8 $space-32;
+    justify-self: start;
+    align-self: start;
+    text-transform: uppercase;
+    letter-spacing: $ls-4;
+    font-weight: $fw-700;
+    font-size: $fs-14;
+    line-height: 1.71;
+    transition:
+      background-color $transition,
+      color $transition;
+
+    &:is(:hover, :focus, :active) {
+      background-color: $clr-black;
+      color: $clr-white;
+    }
+  }
+}
+
+// ---------- aside ----------
+.aside {
+  background-color: $clr-navy-950;
+  padding: clamp($space-16, 4vw, $space-32) clamp($space-24, 4.5vw, $space-40);
+  display: grid;
+  gap: $space-32;
+
+  &__title {
+    color: $clr-gold-400;
+    font-size: $fs-32;
+    font-weight: $fw-700;
+  }
+
+  &__item {
+    display: grid;
+    gap: $space-8;
+
+    &-title {
+      font-size: $fs-20;
+      font-weight: $fw-900;
+      line-height: 1.2;
+    }
+
+    &-link {
+      color: $clr-white;
+      transition: color $transition;
+
+      &:is(:hover, :focus, :active) {
+        color: $clr-gold-400;
+      }
+    }
+
+    &-paragraph {
+      font-size: $fs-15;
+      color: $clr-grey-300;
+      line-height: 1.73;
+    }
+  }
+
+  &__divider {
+    border-color: $clr-navy-600;
+    margin-block: 0;
+  }
+}
+
+// ---------- footer ----------
+.footer {
+  display: grid;
+
+  &__card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: $space-24;
+  }
+
+  &__image {
+    max-width: 100px;
+  }
+
+  &__content {
+    display: grid;
+    gap: $space-8;
+  }
+
+  &__number {
+    color: $clr-red-500;
+    font-size: $fs-32;
+    font-weight: $fw-700;
+  }
+
+  &__title {
+    font-size: $fs-18;
+    font-weight: $fw-900;
+    line-height: 1.3;
+
+    &-link {
+      color: $clr-navy-950;
+      transition: color $transition;
+
+      &:is(:hover, :focus, :active) {
+        color: $clr-red-500;
+      }
+    }
+  }
+
+  &__paragraph {
+    font-size: 15px;
+    color: $clr-navy-600;
+    line-height: 1.73;
+    font-weight: $fw-400;
+  }
+}
+
+// ---------- tablet (>= 769px) ----------
+@media (min-width: 48.063em) {
+  body {
+    padding-inline: $space-80;
+  }
+
+  // ---------- header ----------
+  .header__toggle {
+    display: none;
+  }
+
+  .header__nav {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: static;
+    height: auto;
+    width: auto;
+    padding-inline: 0;
+  }
+
+  .header__nav-list {
+    flex-direction: row;
+    gap: $space-40;
+    margin-top: 0;
+  }
+
+  .header__nav-item-link {
+    color: $clr-navy-600;
+  }
+
+  // ---------- aside ----------
+  .aside {
+    padding: $space-32 $space-40;
+  }
+}
+
+// ---------- large screens (>= 1024px) ----------
+@media (min-width: 64em) {
+  .container {
+    max-width: 1112px;
+  }
+
+  // ---------- main ----------
+  .main {
+    grid-template-columns: 1fr 350px;
+    gap: $space-32;
+
+    &__text {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__description {
+      gap: $space-32;
+    }
+
+    &__paragraph {
+      padding-right: $space-8;
+    }
+
+    &__link {
+      padding-block: $space-12;
+    }
+  }
+
+  // ---------- aside ----------
+  .aside {
+    padding: 16px 32.5px;
+  }
+
+  // ---------- footer ----------
+  .footer {
+    grid-template-columns: repeat(3, 1fr);
+    gap: $space-40;
+  }
+}
