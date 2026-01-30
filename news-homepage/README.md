@@ -9,6 +9,7 @@ This is my take on the Frontend Mentor – [News homepage challenge!](https://ww
 
 - HTML5
 - CSS3 and SCSS
+- JS
 - Google Fonts (Inter)
 
 ---
