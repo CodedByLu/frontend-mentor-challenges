@@ -152,6 +152,7 @@ a {
 
 .footer {
   display: grid;
+  gap: 24px;
 }
 .footer__card {
   display: grid;
