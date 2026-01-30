@@ -224,6 +224,7 @@ a {
 // ---------- footer ----------
 .footer {
   display: grid;
+  gap: $space-24;
 
   &__card {
     display: grid;
