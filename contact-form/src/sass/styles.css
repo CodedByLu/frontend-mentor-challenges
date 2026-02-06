@@ -1,0 +1,237 @@
+body {
+  background-color: #e0f1e8;
+  color: #2a4144;
+  display: grid;
+  font-size: 1rem;
+  place-items: center;
+}
+
+.form {
+  background-color: #fff;
+  border-radius: 16px;
+  display: grid;
+  gap: 24px 16px;
+  grid-template-areas: "title" "firstName" "lastName" "emailAddress" "queryType" "message" "consent" "submitButton";
+  padding: clamp(24px, 5vw, 40px);
+  width: min(90vw, 736px);
+}
+.form-title {
+  font-size: 2rem;
+  font-weight: 700;
+  grid-area: title;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.form-group {
+  display: grid;
+  gap: 8px;
+}
+.form-group-first-name {
+  grid-area: firstName;
+}
+.form-group-last-name {
+  grid-area: lastName;
+}
+.form-group-email-address {
+  grid-area: emailAddress;
+}
+.form-group-query-type {
+  grid-area: queryType;
+}
+.form-group-message {
+  grid-area: message;
+}
+.form-group-consent {
+  grid-area: consent;
+}
+.form-group-flex {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.form-label {
+  cursor: pointer;
+}
+.form-input {
+  border: 1px solid #86a2a5;
+  border-radius: 8px;
+  color: #2a4144;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 12px 24px;
+  position: relative;
+  width: 100%;
+}
+.form-input:hover, .form-input:focus {
+  border-color: #0c7d69;
+}
+.form-input-radio, .form-input-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 2px solid #86a2a5;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  position: relative;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+}
+.form-input-radio {
+  border-radius: 50%;
+}
+.form-input-radio::after {
+  background-color: #0c7d69;
+  border-radius: 50%;
+  content: "";
+  height: 60%;
+  position: absolute;
+  scale: 0;
+  width: 60%;
+}
+.form-input-radio:checked {
+  border-color: #0c7d69;
+}
+.form-input-radio:checked::after {
+  scale: 1;
+}
+.form-input-checkbox {
+  border-radius: 3px;
+}
+.form-input-checkbox:checked {
+  background-color: #0c7d69;
+  border-color: #0c7d69;
+}
+.form-input-checkbox:checked::after {
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  content: "";
+  height: 12px;
+  position: absolute;
+  rotate: 45deg;
+  width: 6px;
+}
+.form-input-textarea {
+  height: 240px;
+  resize: none;
+}
+.form-input-textarea:hover, .form-input-textarea:focus {
+  border-color: #0c7d69;
+}
+.form-input-error-message {
+  color: #d73c3c;
+}
+.form-fieldset {
+  border: none;
+  display: grid;
+  gap: 16px;
+  grid-template-areas: "legend" "enquiry" "support";
+}
+.form-fieldset-legend {
+  grid-area: legend;
+}
+.form-fieldset-option {
+  display: flex;
+  align-items: center;
+  border: 1px solid #86a2a5;
+  border-radius: 8px;
+  gap: 12px;
+  padding: 12px 24px;
+}
+.form-fieldset-option:hover, .form-fieldset-option:focus {
+  border-color: #0c7d69;
+}
+.form-fieldset-option-enquiry {
+  grid-area: enquiry;
+}
+.form-fieldset-option-support {
+  grid-area: support;
+}
+.form-button {
+  background-color: #0c7d69;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 700;
+  grid-area: submitButton;
+  padding-block: 16px;
+  transition: background-color 0.5s ease-in-out;
+}
+.form-button:hover, .form-button:focus-visible {
+  background-color: #063e34;
+}
+.form-button:disabled {
+  background-color: #86a2a5;
+}
+.form-toast-container {
+  display: none;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  padding: 24px;
+  place-items: center;
+  z-index: 100;
+}
+.form-toast-container.active {
+  display: grid;
+}
+.form-toast {
+  animation-name: dropDown;
+  animation-duration: 2s;
+  background-color: #063e34;
+  border-radius: 12px;
+  color: #fff;
+  display: grid;
+  gap: 8px;
+  position: relative;
+  padding: 24px;
+}
+.form-toast-heading {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  gap: 8px;
+}
+.form-toast-paragraph {
+  color: #e0f1e8;
+}
+@keyframes dropDown {
+  0% {
+    top: -250%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+.is-required::after {
+  color: #0c7d69;
+  content: "*";
+  margin-left: 8px;
+}
+
+.invalidInput {
+  border-color: #d73c3c;
+}
+
+@media (min-width: 48em) {
+  .form {
+    grid-template-areas: "title title" "firstName lastName" "emailAddress emailAddress" "queryType queryType" "message message" "consent consent" "submitButton submitButton";
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .form-fieldset {
+    grid-template-areas: "legend legend" "enquiry support";
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .form-input-radio, .form-input-checkbox {
+    width: 24px;
+    height: 24px;
+  }
+  .form-textarea {
+    height: 105px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

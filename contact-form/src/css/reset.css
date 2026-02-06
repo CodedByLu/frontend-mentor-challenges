@@ -1,0 +1,120 @@
+/* 1. Use a more intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Improve focus visibility for accessibility */
+*:focus-visible {
+  outline: 2px solid Highlight;
+  outline-offset: 2px;
+}
+
+/* 4. Allow percentage-based heights in the application */
+html,
+body {
+  height: 100%;
+}
+
+/* 5. Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 6. Improve text rendering and line-height */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  color: #000;
+  /* These are all fallback fonts that are include. Please input custom font you want to use */
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  overflow-wrap: anywhere;
+}
+
+/* 7. Make images and media easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 8. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* 9. Remove built‑in button styles and ensure pointer cursor */
+button,
+[role="button"] {
+  cursor: pointer;
+  font: inherit;
+}
+
+/* 10. Normalize <hr> styling */
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
+}
+
+/* 11. Reset table border-spacing */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 12. Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 13. Balance text wrapping */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 14. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* 15. Create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Inspired by Andy Bell’s Modern CSS Reset */

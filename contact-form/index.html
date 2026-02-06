@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/fonts.css" />
+    <link rel="stylesheet" href="./src/sass/styles.css" />
+
+    <script src="./src/js/app.js" defer></script>
+
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <main>
+      <form class="form" novalidate>
+        <h1 class="form-title">Contact Us</h1>
+
+        <!-- first name -->
+        <div class="form-group form-group-first-name">
+          <label for="firstName" class="form-label is-required"
+            >First Name</label
+          >
+
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            class="form-input"
+          />
+
+          <p id="firstNameError" class="form-input-error-message"></p>
+        </div>
+
+        <!-- last name -->
+        <div class="form-group form-group-last-name">
+          <label for="lastName" class="form-label is-required">Last Name</label>
+
+          <input type="text" name="lastName" id="lastName" class="form-input" />
+
+          <p id="lastNameError" class="form-input-error-message"></p>
+        </div>
+
+        <!-- email address -->
+        <div class="form-group form-group-email-address">
+          <label for="emailAddress" class="form-label is-required"
+            >Email Address</label
+          >
+
+          <input
+            type="email"
+            name="emailAddress"
+            id="emailAddress"
+            class="form-input"
+          />
+
+          <p id="emailAddressError" class="form-input-error-message"></p>
+        </div>
+
+        <!-- query types -->
+        <div class="form-group form-group-query-type">
+          <fieldset class="form-fieldset">
+            <legend class="form-fieldset-legend is-required">Query Type</legend>
+
+            <!-- general enquiry -->
+            <div class="form-fieldset-option form-fieldset-option-enquiry">
+              <input
+                type="radio"
+                name="queryType"
+                id="generalEnquiry"
+                class="form-input-radio"
+              />
+
+              <label for="generalEnquiry" class="form-label"
+                >General Enquiry</label
+              >
+            </div>
+
+            <!-- support request -->
+            <div class="form-fieldset-option form-fieldset-option-support">
+              <input
+                type="radio"
+                name="queryType"
+                id="supportRequest"
+                class="form-input-radio"
+              />
+
+              <label for="supportRequest" class="form-label"
+                >Support Request</label
+              >
+            </div>
+          </fieldset>
+
+          <p id="queryTypeError" class="form-input-error-message"></p>
+        </div>
+
+        <!-- message -->
+        <div class="form-group form-group-message">
+          <label for="message" class="form-label is-required">Message</label>
+
+          <textarea
+            name="message"
+            id="message"
+            class="form-input form-input-textarea"
+          ></textarea>
+
+          <p id="messageError" class="form-input-error-message"></p>
+        </div>
+
+        <!-- consent -->
+        <div class="form-group form-group-consent">
+          <div class="form-group-flex">
+            <input
+              type="checkbox"
+              name="consent"
+              id="consent"
+              class="form-input-checkbox"
+            />
+
+            <label for="consent" class="form-label is-required">
+              I consent to being contacted by the team
+            </label>
+          </div>
+
+          <p id="consentError" class="form-input-error-message"></p>
+        </div>
+
+        <!-- button -->
+        <button type="submit" id="submitButton" class="form-button">
+          Submit
+        </button>
+
+        <!-- success toast message -->
+        <div class="form-toast-container" role="status" aria-live="polite">
+          <section class="form-toast">
+            <h2 class="form-toast-heading">
+              <img src="./assets/images/icon-success-check.svg" alt="" />Message
+              Sent!
+            </h2>
+
+            <p class="form-toast-paragraph">
+              Thanks for completing the form. We'll be in touch soon!
+            </p>
+          </section>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
